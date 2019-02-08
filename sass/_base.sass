@@ -1,0 +1,28 @@
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: inherit
+
+    &::after,
+    &::before
+        box-sizing: inherit
+
+a
+    text-decoration: none
+
+html
+    box-sizing: border-box
+    font-size: 62.5%
+
+    @media only screen and (max-width: $screen-wide)
+        font-size: 50%
+
+body
+    font-family: "Open Sans", sans-serif
+    font-weight: 400
+    background-image: linear-gradient( to right bottom, $Primary, $Primary-dark )
+    background-size: cover
+    background-repeat: no-repeat
+    min-height: 100vh
+    color: $Grey-dark-2

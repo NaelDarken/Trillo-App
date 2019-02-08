@@ -1,0 +1,77 @@
+
+#overview
+
+    // the gallery of photos
+    #gallery
+        display: flex
+
+        figure
+
+            img
+                width: 100%
+                display: block
+    
+    // hotel review
+    #review
+        border-bottom: $border-bottom
+        display: flex
+        align-items: center
+
+        .star-icon, // icons
+        .location-icon
+            width: 1.75rem
+            height: 1.75rem
+            fill: $Primary
+
+            @media only screen and (max-width: $screen-tablet)
+                width: 1.5rem
+                height: 1.5rem
+        
+        h1 // heading
+            font-size: 2.25rem
+            font-weight: 300
+            text-transform: uppercase
+            letter-spacing: 1px
+            padding: 1.5rem 3rem
+
+            @media only screen and (max-width: $screen-tablet)
+                font-size: 2rem
+                padding: 1.5rem 3rem
+    
+        #evaluation // stars
+            margin-right: auto
+            display: flex
+
+        #location // location
+            font-size: 1.2rem
+            display: flex
+            align-items: center
+
+            .location-icon
+                margin-right: 0.5rem
+
+        #rating // rating
+            background-color: $Primary
+            display: flex
+            align-self: stretch
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            color: white
+            margin-left: 3rem
+            padding: 0 2.25rem
+
+            h2
+                font-size: 2.3rem
+                font-weight: 300
+
+                @media only screen and (max-width: $screen-tablet)
+                    font-size: 2rem
+            
+            h3
+                font-size: 1rem
+                text-transform: uppercase
+
+                @media only screen and (max-width: $screen-tablet)
+                    font-size: .9rem
+    

@@ -1,0 +1,200 @@
+
+#details
+    font-size: 1.4rem
+    display: flex
+    padding: 4.5rem
+    background-color: $Grey-light-2
+    border-bottom: $border-bottom
+
+    @media only screen and (max-width: $screen-medium)
+        padding: 3rem
+    
+    @media only screen and (max-width: $screen-tablet)
+        flex-direction: column
+
+    #description
+        background-color: white
+        box-shadow: $shadow-dark
+        flex: 0 0 60%
+        margin-right: 4.5rem
+        padding: 3rem
+
+        @media only screen and (max-width: $screen-medium)
+            margin-right: 3rem
+        
+        @media only screen and (max-width: $screen-tablet)
+            margin-right: 0
+            margin-bottom: 3rem
+
+        .brief
+            font-size: 1.5rem
+
+            &:not(:last-of-type)
+                margin-bottom: 2rem
+        
+        ul
+            list-style: none
+            margin: 3rem 0
+            padding: 3rem
+            border-top: $border-bottom
+            border-bottom: $border-bottom
+            display: flex
+            flex-wrap: wrap
+
+            li
+                flex: 0 0 50%
+                margin-bottom: .7rem
+                font-size: 1.3rem
+
+                &::before
+                    content: ""
+                    background-color: $Primary
+                    mask-image: url(../img/chevron-thin-right.svg)
+                    mask-size: cover
+                    width: 1rem
+                    height: 1rem
+                    display: inline-block
+                    margin-right: .7rem
+
+        #recommended
+            font-size: 1.3rem
+            color: $Grey-dark-3
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            &-users
+                display: flex
+
+                img
+                    width: 4rem
+                    height: 4rem
+                    border-radius: 50%
+                    border: 3px solid white
+                    background-size: cover
+                    box-sizing: content-box
+
+                    &:not(:last-child)
+                        margin-right: -2rem
+
+    // User Reviews
+    #user-reviews
+        flex: 1
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        figure.user-review
+            background-color: white
+            box-shadow: $shadow-dark
+            padding: 3rem
+            margin-bottom: 3.5rem
+            position: relative
+            overflow: hidden
+
+            @media only screen and (max-width: $screen-medium)
+                margin-bttom: 3rem
+
+            &::before
+                content: "\201C"
+                line-height: 1
+                font-family: sans-serif
+                font-size: 20rem
+                color: $Grey-light-3
+                position: absolute
+                top: -2.4rem
+                left: -0.79rem
+
+            blockquote
+                margin-bottom: 3rem
+                position: relative
+                z-index: 3
+            
+            figcaption
+                display: flex
+                align-items: center
+
+                img
+                    width: 4.5rem
+                    height: 4.5rem
+                    border-radius: 50%
+                
+                .user-details
+                    margin-left: 1.5rem
+
+                    .user
+                        font-size: 1.1rem
+                        font-weight: 600
+                        text-transform: uppercase
+                        margin-bottom: 4px
+                    
+                    .user-date
+                        font-size: 1rem
+                        color: $Grey-dark-3
+                
+                .user-rating
+                    font-size: 2.2rem
+                    color: $Primary
+                    font-weight: 300
+                    margin-left: auto
+
+// Action Section
+#cta
+    text-align: center
+    background-color: white
+    padding: 3.5rem 0
+
+    @media only screen and (max-width: $screen-tablet)
+        padding: 2rem 0
+
+    h2
+        text-transform: uppercase
+        font-size: 2rem
+        font-weight: 300
+        margin-bottom: 2.5rem
+
+        @media only screen and (max-width: $screen-tablet)
+            font-size: 1.5rem
+    
+    button
+        font-size: 1.5rem
+        font-weight: 300
+        text-transform: uppercase
+        border-radius: 100px
+        border: none
+        color: white
+        background-image: linear-gradient( to right, $Primary-light, $Primary-dark )
+        cursor: pointer
+        position: relative
+        overflow: hidden
+
+        @media only screen and (max-width: $screen-tablet)
+            font-size: 1rem
+
+        & > *
+            width: 100%
+            height: 100%
+            display: inline-block
+            transition: all .2s
+        
+        .show
+            padding: 2rem 7.5rem
+        
+        .hide
+            position: absolute
+            top: -100%
+            left: 0
+            padding: 2rem 0
+
+        &:hover
+            background-image: linear-gradient( to right, $Primary-dark, $Primary-light )
+            
+            .hide
+                top: 0
+
+            .show
+                transform: translateY( 100% )
+
+        &:focus
+            outline: 0
+            animation: pulse 1s ease-in-out infinite      
